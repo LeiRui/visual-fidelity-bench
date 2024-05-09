@@ -11,19 +11,21 @@
     -   来源：Z. Jerzak , T. Heinze, M. Fehr, D. Gr¨ber, R . Har tung, and N. Stojanovic. The DEBS2012 Grand Challenge. In DEBS, pages 393–398. ACM, 2012. https://debs.org/grand-challenges/2012/. 提取第一列和第五列得到传感器MF03（即电力主相3）以100Hz频率左右采集的制造设备监控数据。
     -   特点：混合信号，包含低、高和突发变化
 
--   测试输入：100万点的原始时间序列csv文件'MF03.csv'，800点的采样序列csv文件'sampled.csv'
+-   测试输入：100万点的原始时间序列csv文件'MF03.csv'，使用等间隔采样得到的800点的采样序列csv文件'sampled.csv'
 
 -   测试过程：用原始时间序列画出折线图f1，用采样序列画出折线图f2，然后用`SSIM(f1,f2)`来度量这两张图之间的相似度，用于评价采样算法的保形效果。
 
 -   测试结果：
 
-    原始序列折线图f1:
-
-![image-20240509140019899](README.assets/image-20240509140019899.png)
-
-​		使用等间隔采样算法得到的采样序列折线图f2如下所示，计算`SSIM(f1,f2)=0.0109`，接近0，表示保形效果差：
-
-![image-20240509141635041](README.assets/image-20240509141635041.png)
+    -   原始序列折线图f1：
+    
+        ![image-20240509140019899](README.assets/image-20240509140019899.png)
+    
+    -   采样序列折线图f2：
+    
+        ![image-20240509141635041](README.assets/image-20240509141635041.png)
+    
+    -   计算`SSIM(f1,f2)=0.0109`，接近0，表示采样算法的保形效果差。
 
 
 
